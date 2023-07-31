@@ -1,28 +1,27 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{ msg }}</h1>
+    <Car></Car>
+    <Car></Car>
+    <Car></Car>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Car from './components/Car.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {Car},
+  data() {
+    return {
+      msg : '汽车信息'
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
